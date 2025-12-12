@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{ ASCII-Art Web }</title>
+        <!-- TMP icon -->
+        <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="/static/img/logo.png" alt="logo">
+            <h1>{ ASCII-ART WEB }</h1>
+        </header>
+            <div class="container">      
+                <form action="/ascii-art" method="POST">
+                    <div class="text">
+                        <div class="input">
+                            <p class="input">$ <p class="blink">█</p></p>
+                            <textarea class="input-box" name="inputText"  placeholder=" ">{{.Input}}</textarea>
+                        </div>
+                        <br>
+                        <div class="button-div">
+                            <select name="banner" id="banner-select" class="buttons">
+                                <option value="standard" {{if eq .Banner "standard" }} selected {{ end }} > Standard </option>
+                                <option value="shadow" {{if eq .Banner "shadow" }} selected {{ end }} > Shadow </option>
+                                <option value="thinkertoy"{{if eq .Banner "thinkertoy" }} selected {{ end }} > Thinkertoy </option>
+                            </select>
+                            <select name="color" id="color-select" class="buttons">
+                                <option value="#00ff00" {{if eq .Color "#00ff00" }} selected {{ end }} > Terminal Green </option>                                
+                                <option value="white" {{if eq .Color "white" }} selected {{ end }} > White </option>
+                                <option value="red" {{if eq .Color "red" }} selected {{ end }} > Red </option>
+                                <option value="yellow" {{if eq .Color "yellow" }} selected {{ end }} > Yellow </option>
+                                <option value="blue" {{if eq .Color "blue" }} selected {{ end }} > Blue </option>
+                                <option value="orange" {{if eq .Color "orange" }} selected {{ end }} > Orange </option>
+                                <option value="green" {{if eq .Color "green" }} selected {{ end }} > Green </option>
+                                <option value="purple" {{if eq .Color "purple" }} selected {{ end }} > Purple </option>
+                                <option value="fuchsia" {{if eq .Color "fuchsia" }} selected {{ end }} > Fuschia </option>
+                                <option value="cyan" {{if eq .Color "cyan" }} selected {{ end }} > Cyan </option>                                
+                            </select>
+                            <button class="buttons" type="submit">Generate ASCII</button>
+                        </div>                    
+                    </div>
+                </form> 
+                <pre class="result" style="text-shadow: 1px 1px 2px {{.Color}}, 0 0 1em {{.Color}}, 0 0 0.2em {{.Color}}; color: {{.Color}};"><span class="result-span">{{.Result}}</span></pre>
+            </div>
+            <div class="help">
+                <img class="maxwell" src="/static/img/maxwell.jpeg" alt="maxwell the cat">
+                <div class="help-text">
+                    <p>
+                        Hey ! I'm  <i>Maxwell the cat</i>. Let me explain to you how the ASCII converter works.
+                    </p>
+                    <ul>
+                        <li>Type some text in the input box (the one next to the blinking square)</li>
+                        <li>Select a banner format (standard, shadow, or thinkertoy)</li>
+                        <li>Select a color amongst all the available ones</li>
+                        <li>Click "generate ASCII"</li>
+                    </ul>
+                    <p>
+                        <strong>Warning</strong> : Accents like <i>é,è,à</i> or special characters like <i>ç</i> won't be read by the converter and thus won't be printed in the output
+                    </p>
+                </div>
+            </div>
+        <footer>
+            <a target="_blank" href="https://github.com/IronBeagle404">IronBeagle</a>
+            &
+            <a target="_blank" href="https://github.com/nathuc69">Nathuc69</a>
+        </footer>
+
+        </body>
+</html>
+
+

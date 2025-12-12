@@ -1,0 +1,196 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  background-color: black;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* remove auto outline */
+textarea, select, button {
+  border: none;
+  outline: none;
+}
+
+header {
+  margin: 2vh 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+   text-align: center;
+  gap: 2vw;
+
+  font-size: 2.8vh;
+}
+
+header img {
+  height: 10%;
+  width: 10%;
+}
+
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: row;  justify-content: center;
+  gap: 1vw;
+
+  font-size: 2vh;
+  align-items: center;
+}
+
+.input-box {
+  width: 80vw;
+  height: 5vh;
+  background-color: black;
+  color: #00ff00;
+  outline: solid #00ff00 1px;
+  font-size: inherit;
+
+  resize: none;
+}
+
+.input-box::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  margin-bottom: 10vh;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  gap: 4vw;
+  justify-content: center;
+  margin: 0.5vw;
+}
+
+.buttons {
+  color: #00ff00; 
+  background-color: black;
+  padding: 0.5vw;
+  outline: solid #00ff00 1px;
+  text-align: center;
+  border-radius: 1.5rem;
+  font-size: 1.5vh;
+  width: 10vw;
+  max-width: 20vw;
+}
+
+pre {
+  text-align: left;
+  padding: 1vw;
+  outline: solid #00ff00 1px;
+  margin-top: 2vw;
+  color: white;
+  font-weight: bold;
+  overflow: auto;
+  height: auto;
+  width: 90vw;
+  margin-bottom: auto;
+}
+
+/* scrollbar settings not working on firefox */
+pre::-webkit-scrollbar {
+  background-color: black;
+  outline: solid #00ff00 1px;
+  height: 1em;
+}
+pre::-webkit-scrollbar-thumb {
+  background-color: #00ff00;
+}
+
+.help {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1vw;
+  margin-bottom: 10vh;
+  align-items: center;
+}
+
+.maxwell {
+  height: 10%;
+  width: 10%;
+  outline: solid #00ff00 2px;
+}
+
+.help-text {
+  outline: solid #00ff00 1px;
+  padding: 1vw;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+footer {
+  position: sticky;
+  margin-top: 10vh;
+  width: 100%;
+  height: 2.5rem;
+  padding-top: 2vh;
+  text-align: center;
+  outline: solid #00ff00 1px;
+}
+
+a {
+  color: #00ff00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (orientation: portrait) {
+
+  header {
+    flex-direction: column;
+    font-size: 4vw;
+  }
+
+  .help {
+    flex-direction: column;
+  }
+  .help p {
+    padding-left: 5vw;
+  }
+  .maxwell {
+    width: 40%;
+    height: 40%;
+  }
+
+  footer {
+    font-size: 2vh;
+  }
+
+  pre {
+    font-size: 1vh;
+  }
+
+  .buttons {
+    width: 50vw;
+  }
+}
