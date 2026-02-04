@@ -43,3 +43,11 @@ Once it's ready, you will be prompted with an indication of the port hosting the
 Since it is harcoded to use the port `8080`, you can connect to the website with the adress http://localhost:8080
 
 To stop the server, you can just `CTRL + C` in the console *(the terminal window where you ran the previous command)*
+
+<br>
+
+### Acknowledgements
+
+This is originally a study project part of Zone01's core curriculum. 
+
+I made this project in collaboration with [Nathan Allain](https://github.com/nathuc69)
